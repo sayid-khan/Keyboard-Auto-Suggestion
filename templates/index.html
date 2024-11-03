@@ -6,10 +6,56 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(
+          to right,
+          rgb(13, 137, 143),
+          rgb(104, 46, 154)
+        );
+        flex-direction: column;
+      }
+
+      .containerMain {
+        background: wheat;
+        width: 600px;
+        padding: 20px 25px 15px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .form-control {
+        border-radius: 10px;
+      }
+
+      .btn-primary {
+        border-radius: 10px;
+        background-color: rgb(1, 48, 48);
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    </style>
   </head>
-  <body style="background: #a1e5a1">
-    <div class="container mt-5">
-      <h1>Keyboard Auto Suggestion System</h1>
+  <body>
+    <h1 style="color: rgb(243, 230, 117)">Keyboard Auto Suggestion System</h1>
+    <div class="containerMain">
       <form method="POST" action="/suggest" class="mt-4">
         <div class="form-group">
           <label for="keyword">Enter a word:</label>
@@ -21,7 +67,9 @@
             required
           />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="button-container">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </form>
 
       <div id="suggestions" class="mt-4">
